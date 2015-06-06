@@ -39,7 +39,7 @@
                     Enter your address below to find and connect with the people who represent you!
                 </span>
             </p>
-            <form class="form-signin" style="background-color: #006FCC;">
+            <form id="occupyForm" class="form-signin" style="background-color: #006FCC;">
                 <label for="inputAddress" class="sr-only" style="color: white;">Street Address</label>
                 <input type="text" id="inputAddress" name="inputAddress" class="form-control" placeholder="Street Address" required autofocus>
                 <label for="inputCity" class="sr-only" style="color: white;">City</label>
@@ -47,11 +47,23 @@
                 <label for="inputZip" class="sr-only" style="color: white;">Zip</label>
                 <input type="text" id="inputZip" name="inputZip" class="form-control" placeholder="Zip" required>
                 <button class="btn btn-lg btn-primary btn-block" id="inputButton" type="submit" style="color: white; background-color: #1DB455 ;">Connect!</button>
-                <button class="btn btn-lg btn-primary btn-block" id="inputButton" type="submit" style="color: white; background-color: #1DB455 ;"><i class="glyphicon glyphicon-map-marker"></i></button>
+                <button class="btn btn-lg btn-primary btn-block" id="gpsButton" type="submit" style="color: white; background-color: #1DB455 ;"><i class="glyphicon glyphicon-map-marker"></i></button>
             </form>
         </div>
 
-        <div id="occupyCall" class="col-xs-6">
+        <div id="occupyResults" class="col-xs-6">
+            <ul class="nav-tabs" role="tablist">
+                <li>
+                    <i class="glyphicon glyphicon-earphone" style="color: white;"></i>
+                    <p style="color: white;">Call</p>
+                </li>
+                <li>
+                    <i class="glyphicon glyphicon-envelope" style="color: white;"></i><p style="color: white;">Email</p>
+                </li>
+            </ul>
+        </div>
+
+        <div id="occupyCall" class="col-xs-6 tab-content">
             <div class="row" style="background-color: #006FCC;">
                 <!--section with name/contact options-->
                 <h3 class="text-center" id="welcomeRepName" style="color: white;">John Cornyn - (R)</h3>
@@ -69,6 +81,7 @@
                         Please call your legislator's Austin office and tell whoever answer the phone:
                     </span>
                     <br />
+                    <br />
                     -Your name, and that you are a constitutent.
                     <br />
                     - Urge the member to oppose HB 1485 when it receives a floor vote this week.
@@ -78,12 +91,12 @@
                     - Thank them for their assistance!
                 </p>
                 <footer id="welcomeRepAction" style="color: white;">
-                    <button class="btn btn-lg btn-primary btn-block" id="inputButton" type="submit" style="color: white; background-color: #1DB455 ;">Call Sen. Cornyn Now!</button>
+                    <button class="btn btn-lg btn-primary btn-block" id="callButton" type="submit" style="color: white; background-color: #1DB455 ;">Call Sen. Cornyn Now!</button>
                 </footer>
             </div>
         </div>
 
-        <div id="occupyEmail" class="col-xs-6">
+        <div id="occupyEmail" class="col-xs-6 tab-content">
             <div class="row" style="background-color: #006FCC;">
                 <!--section with name/contact options-->
                 <h3 class="text-center" id="welcomeRepName" style="color: white;">John Cornyn - (R)</h3>
@@ -98,21 +111,27 @@
                 <!--section with text-->
                 <p style="color: #006fcc; background-color: #d8d8d8; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
                     Dear Senator Cornyn,
+                    <br />                    
                     <br />
                     I am a constitutent, and am writing to urge you to oppose HB 1485 when it comes to the House floor this week.
                     <br />
+                    <br />
                     This bill  would make it harder for struggling Texans to put enough food on the table by restricting working families' ability to access SNAP benefits. SNAP is an important resource for my community and our state.
                     <br />
-                    Thank you for your consideration.                    
+                    <br />
+                    Thank you for your consideration.
+                    <br />
                     <br />
                     Sincerely,
                     <br />
+                    <br />
                     NAME
+                    <br />
                     <br />
                     ADDRESS
                 </p>
                 <footer id="welcomeRepAction" style="color: white;">
-                    <button class="btn btn-lg btn-primary btn-block" id="inputButton" type="submit" style="color: white; background-color: #1DB455 ;">Email Sen. Cornyn Now!</button>
+                    <button class="btn btn-lg btn-primary btn-block" id="emailButton" type="submit" style="color: white; background-color: #1DB455 ;">Email Sen. Cornyn Now!</button>
                 </footer>
             </div>
         </div>
@@ -129,6 +148,11 @@
 
     occupyLege.startup = function () {
         occupyLege.addressValidation();
+
+        //$('#myTab a').click(function (e) {
+        //    e.preventDefault()
+        //    $(this).tab('show')
+        //})
     }
 
     occupyLege.addressValidation = function () {
@@ -170,24 +194,24 @@
         $.ajax(url, settings)
     };
 
-    occupyLege.successCall = function () {
+    //occupyLege.successCall = function () {
 
-        if (electa.page.returnUrl) {
-            window.location.href = electa.page.returnUrl;
-        }
+    //    if (electa.page.returnUrl) {
+    //        window.location.href = electa.page.returnUrl;
+    //    }
 
-        else {
+    //    else {
 
-            window.location.href = "/users/info"
-        }
+    //        window.location.href = "/users/info"
+    //    }
 
-    }
+    //}
 
-    eocc = function (data, jqXHR, textStatus) {
-        $("#signinbutton").val("Try Again");
+    //eocc = function (data, jqXHR, textStatus) {
+    //    $("#signinbutton").val("Try Again");
 
-        electa.utils.errorMessageExposer(data, textStatus);
-    }
+    //    electa.utils.errorMessageExposer(data, textStatus);
+    //}
 
 
 
