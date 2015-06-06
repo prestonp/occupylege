@@ -30,7 +30,28 @@
 
     <div class="container">
 
-        <div id="welcomePage" class="col-xs-6">
+        <div id="occupyMain" class="col-xs-6" style="background-color: #006FCC;">
+            <p class="text-center" id="welcomeMainMsg" style="color: white;">
+                We need your help! The Texas Legislature is considering a bill that would make it harder for struggling Texans to put enough food on the table. HB 1485 would restrict working families from accessing SNAP benefits when they need them most.
+                <br />
+                <br />
+                <span class="lead text-center">
+                    Enter your address below to find and connect with the people who represent you!
+                </span>
+            </p>
+            <form class="form-signin" style="background-color: #006FCC;">
+                <label for="inputAddress" class="sr-only" style="color: white;">Street Address</label>
+                <input type="text" id="inputAddress" name="inputAddress" class="form-control" placeholder="Street Address" required autofocus>
+                <label for="inputCity" class="sr-only" style="color: white;">City</label>
+                <input type="text" id="inputCity" name="inputCity" class="form-control" placeholder="City" required>
+                <label for="inputZip" class="sr-only" style="color: white;">Zip</label>
+                <input type="text" id="inputZip" name="inputZip" class="form-control" placeholder="Zip" required>
+                <button class="btn btn-lg btn-primary btn-block" id="inputButton" type="submit" style="color: white; background-color: #1DB455 ;">Connect!</button>
+                <button class="btn btn-lg btn-primary btn-block" id="inputButton" type="submit" style="color: white; background-color: #1DB455 ;"><i class="glyphicon glyphicon-map-marker"></i></button>
+            </form>
+        </div>
+
+        <div id="occupyCall" class="col-xs-6">
             <div class="row" style="background-color: #006FCC;">
                 <!--section with name/contact options-->
                 <h3 class="text-center" id="welcomeRepName" style="color: white;">John Cornyn - (R)</h3>
@@ -41,41 +62,31 @@
                     <li>
                         <i class="glyphicon glyphicon-envelope" style="color: white;"></i><p style="color: white;">Email</p>
                     </li>
-                    <li>
-                        <i class="glyphicon glyphicon-pencil" style="color: white;"></i><p style="color: white;">Write</p>
-                    </li>
                 </ul>
                 <!--section with text-->
-                <div class="row" style="color: #006FCC; background-color: #d8d8d8;">
-                    <blockquote id="welcomeIssue">
-                        Main Topic (Bill or Issue)
-                    </blockquote>
-                    <p id="welcomeRepName2" style="color: #006fcc; background-color: #d8d8d8;">Sen. Cornyn, here is a message and text block</p>
-                </div>
+                <p style="color: #006fcc; background-color: #d8d8d8; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+                    <span class="lead text-center">
+                        Please call your legislator's Austin office and tell whoever answer the phone:
+                    </span>
+                    <br />
+                    -Your name, and that you are a constitutent.
+                    <br />
+                    - Urge the member to oppose HB 1485 when it receives a floor vote this week.
+                    <br />
+                    - If you have a personal story about hunger or SNAP please share it.
+                    <br />
+                    - Thank them for their assistance!
+                </p>
                 <footer id="welcomeRepAction" style="color: white;">
-                    <h3 class="text-center" id="welcomeRepEmail" style="color: white;">cornyn@senate.gov</h3>
-                    <button class="btn btn-lg btn-primary btn-block" id="inputButton" type="submit" style="color: white; background-color: #1DB455 ;">Email Sen. Cornyn Now!</button>
+                    <button class="btn btn-lg btn-primary btn-block" id="inputButton" type="submit" style="color: white; background-color: #1DB455 ;">Call Sen. Cornyn Now!</button>
                 </footer>
             </div>
         </div>
 
-
-        <div class="form-group col-xs-6" id="addressForm">
-            <form class="form-signin" style="background-color: #006FCC;">
-                <h4 style="color: white;" class="text-center">Enter your address below to find and connect with the people who represent you!</h4>
-                <label for="inputAddress" class="sr-only" style="color: white;">Street Address</label>
-                <input type="text" id="inputAddress" name="inputAddress" class="form-control" placeholder="Street Address" required autofocus>
-                <label for="inputCity" class="sr-only" style="color: white;">City</label>
-                <input type="text" id="inputCity" name="inputCity" class="form-control" placeholder="City" required>
-                <label for="inputZip" class="sr-only" style="color: white;">Zip</label>
-                <input type="text" id="inputZip" name="inputZip" class="form-control" placeholder="Zip" required>
-                <button class="btn btn-lg btn-primary btn-block" id="inputButton" type="submit" style="color: white; background-color: #1DB455 ;">Connect</button>
-            </form>
-        </div>
-
-          <div id="searchResults" style="background-color: #006FCC;" class="col-xs-6">
-            <div class="row">
-                <h3 id="searchRepName" style="color: white;" class="text-center">John Cornyn - (R)</h3>
+        <div id="occupyEmail" class="col-xs-6">
+            <div class="row" style="background-color: #006FCC;">
+                <!--section with name/contact options-->
+                <h3 class="text-center" id="welcomeRepName" style="color: white;">John Cornyn - (R)</h3>
                 <ul class="list-inline text-center">
                     <li>
                         <i class="glyphicon glyphicon-earphone" style="color: white;"></i><p style="color: white;">Call</p>
@@ -83,10 +94,26 @@
                     <li>
                         <i class="glyphicon glyphicon-envelope" style="color: white;"></i><p style="color: white;">Email</p>
                     </li>
-                    <li>
-                        <i class="glyphicon glyphicon-pencil" style="color: white;"></i><p style="color: white;">Write</p>
-                    </li>
                 </ul>
+                <!--section with text-->
+                <p style="color: #006fcc; background-color: #d8d8d8; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+                    Dear Senator Cornyn,
+                    <br />
+                    I am a constitutent, and am writing to urge you to oppose HB 1485 when it comes to the House floor this week.
+                    <br />
+                    This bill  would make it harder for struggling Texans to put enough food on the table by restricting working families' ability to access SNAP benefits. SNAP is an important resource for my community and our state.
+                    <br />
+                    Thank you for your consideration.                    
+                    <br />
+                    Sincerely,
+                    <br />
+                    NAME
+                    <br />
+                    ADDRESS
+                </p>
+                <footer id="welcomeRepAction" style="color: white;">
+                    <button class="btn btn-lg btn-primary btn-block" id="inputButton" type="submit" style="color: white; background-color: #1DB455 ;">Email Sen. Cornyn Now!</button>
+                </footer>
             </div>
         </div>
 
