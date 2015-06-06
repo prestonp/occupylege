@@ -1,7 +1,7 @@
 ﻿
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>OccupyLege</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,88 +20,80 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
+<body style="background-color:#2196F3 ;">
+
+    <nav class="navbar" style="background-color: #0A7FDC; ">
+        <h2 class="form-signin-heading" style="color: white;">OccupyLege<i style="color: white;" class="glyphicon glyphicon-question-sign pull-right"></i></h2>
+    </nav>
 
     <div class="container">
 
-        <div id="welcomePage">
-            <h2 class="form-signin-heading">OccupyTheLege<i class="glyphicon glyphicon-question-sign pull-right"></i></h2>
-            <div class="row">
-                <h3 id="welcomeRepName">John Cornyn - (R)</h3>
-                <ul class="list-inline">
+        <div id="welcomePage" class="col-xs-6">
+            <div class="row" style="background-color: #006FCC;">
+                <!--section with name/contact options-->
+                <h3 class="text-center" id="welcomeRepName" style="color: white;">John Cornyn - (R)</h3>
+                <ul class="list-inline text-center">
                     <li>
-                        <i class="glyphicon glyphicon-earphone"></i><p>Call</p>
+                        <i class="glyphicon glyphicon-earphone" style="color: white;"></i><p style="color: white;">Call</p>
                     </li>
                     <li>
-                        <i class="glyphicon glyphicon-envelope"></i><p>Email</p>
+                        <i class="glyphicon glyphicon-envelope" style="color: white;"></i><p style="color: white;">Email</p>
                     </li>
                     <li>
-                        <i class="glyphicon glyphicon-pencil"></i><p>Write</p>
+                        <i class="glyphicon glyphicon-pencil" style="color: white;"></i><p style="color: white;">Write</p>
                     </li>
                 </ul>
-            </div>
-            <div id="welcomeCampaignMsg" class="row">
-                <h3 id="welcomeIssue">
-                    Main Topic (Bill or Issue)
-                </h3>
-                <p id="welcomeRepName2">Sen. Cornyn,</p>
-                <br />
-                <p id="welcomeMsg1">Paragraph 1 of info</p>
-                <br />
-                <p id="welcomeMsg2">Paragraph 2 of info</p>
-                <br />
-                <p id="welcomeSalutation">Bye Bye</p>
-            </div>
-            <div class="row" id="welcomeRepEmail">
-                <h2>cornyn@senate.gov</h2>
-            </div>
-            <div class="row" id="welcomeRepAction">
-                Email Sen. Cornyn now!
+                <!--section with text-->
+                <div class="row" style="color: #006FCC; background-color: #d8d8d8;">
+                    <blockquote id="welcomeIssue">
+                        Main Topic (Bill or Issue)
+                    </blockquote>
+                    <p id="welcomeRepName2" style="color: #006fcc; background-color: #d8d8d8;">Sen. Cornyn, here is a message and text block</p>
+                </div>
+                <footer id="welcomeRepAction" style="color: white;">
+                    <h3 class="text-center" id="welcomeRepEmail" style="color: white;">cornyn@senate.gov</h3>
+                    <button class="btn btn-lg btn-primary btn-block" id="inputButton" type="submit" style="color: white; background-color: #1DB455 ;">Email Sen. Cornyn Now!</button>
+                </footer>
             </div>
         </div>
 
-        <div id="addressForm">
-            <form class="form-signin">
-                <h2 class="form-signin-heading">OccupyTheLege<i class="glyphicon glyphicon-question-sign pull-right"></i></h2>
-                <p>Enter your address below to find and connect with the people who represent you!</p>
-                <label for="inputAddress" class="sr-only">Street Address</label>
+
+        <div class="form-group col-xs-6" id="addressForm">
+            <form class="form-signin" style="background-color: #006FCC;">
+                <h4 style="color: white;" class="text-center">Enter your address below to find and connect with the people who represent you!</h4>
+                <label for="inputAddress" class="sr-only" style="color: white;">Street Address</label>
                 <input type="text" id="inputAddress" name="inputAddress" class="form-control" placeholder="Street Address" required autofocus>
-                <label for="inputCity" class="sr-only">City</label>
+                <label for="inputCity" class="sr-only" style="color: white;">City</label>
                 <input type="text" id="inputCity" name="inputCity" class="form-control" placeholder="City" required>
-                <label for="inputZip" class="sr-only">Zip</label>
+                <label for="inputZip" class="sr-only" style="color: white;">Zip</label>
                 <input type="text" id="inputZip" name="inputZip" class="form-control" placeholder="Zip" required>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Connect</button>
+                <button class="btn btn-lg btn-primary btn-block" id="inputButton" type="submit" style="color: white; background-color: #1DB455 ;">Connect</button>
             </form>
         </div>
 
-      <div id="searchResults">
-          <h2 class="form-signin-heading">OccupyTheLege<i class="glyphicon glyphicon-question-sign pull-right"></i></h2>
-          <div class="row">
-              <h3 id="searchRepName">John Cornyn - (R)</h3>
-              <ul class="list-inline">
-                  <li>
-                      <i class="glyphicon glyphicon-earphone"></i><p>Call</p>
-                  </li>
-                  <li>
-                      <i class="glyphicon glyphicon-envelope"></i><p>Email</p>
-                  </li>
-                  <li>
-                      <i class="glyphicon glyphicon-pencil"></i><p>Write</p>
-                  </li>
-              </ul>
-          </div>
-      </div>
+          <div id="searchResults" style="background-color: #006FCC;" class="col-xs-6">
+            <div class="row">
+                <h3 id="searchRepName" style="color: white;" class="text-center">John Cornyn - (R)</h3>
+                <ul class="list-inline text-center">
+                    <li>
+                        <i class="glyphicon glyphicon-earphone" style="color: white;"></i><p style="color: white;">Call</p>
+                    </li>
+                    <li>
+                        <i class="glyphicon glyphicon-envelope" style="color: white;"></i><p style="color: white;">Email</p>
+                    </li>
+                    <li>
+                        <i class="glyphicon glyphicon-pencil" style="color: white;"></i><p style="color: white;">Write</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-    </div> <!-- /container -->
-
-
+    </div><!-- /container -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-
-
+</body>
 
 </html>
 
@@ -109,28 +101,71 @@
 <script type="text/javascript">
 
     occupyLege.startup = function () {
+        occupyLege.addressValidation();
+    }
 
-        occupyLege.addressValidation = function () {
-            $('#addressForm').validate({
-                rules: {
-                    'inputAddress': {
-                        required: true,
-                    },
-                    'inputCity': {
-                        required: true
-                    },
-                    'inputZip': {
-                        required: true
-                    },
-                }
-            })
-        };
+    occupyLege.addressValidation = function () {
+        $('#addressForm').validate({
+            rules: {
+                'inputAddress': {
+                    required: true,
+                },
+                'inputCity': {
+                    required: true
+                },
+                'inputZip': {
+                    required: true
+                },
+            }
+        })
+    };
 
+    occupyLege.addressInputSuccess = function () {
+        if ($("#inputButton").valid() == true) {
+            occupyLege.displayAddress();
+        }
+    };
 
+    occupyLege.displayAddress = function () {
 
+        var userInfo = $("#inputButton").serialize();
+        //not sure what the URL here is going to be?
+        var url = "/api/users/login";
+        var settings = {
+            cache: false,
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+            type: "GET",
+            data: userLogin,
+            dataType: "JSON",
+            success: occupyLege.successCall,
+            error: electa.services.loginAjaxError,
+        }
+        $.ajax(url, settings)
+    };
 
+    occupyLege.successCall = function () {
 
+        if (electa.page.returnUrl) {
+            window.location.href = electa.page.returnUrl;
+        }
+
+        else {
+
+            window.location.href = "/users/info"
+        }
 
     }
+
+    eocc = function (data, jqXHR, textStatus) {
+        $("#signinbutton").val("Try Again");
+
+        electa.utils.errorMessageExposer(data, textStatus);
+    }
+
+
+
+
+
+
 
 </script>
