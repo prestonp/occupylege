@@ -30,7 +30,7 @@
 
     <div class="container">
 
-        <div id="occupyMain" class="col-xs-6" style="background-color: #006FCC;">
+        <div id="occupyMain" style="background-color: #006FCC;">
             <p class="text-center" id="welcomeMainMsg" style="color: white;">
                 We need your help! The Texas Legislature is considering a bill that would make it harder for struggling Texans to put enough food on the table. HB 1485 would restrict working families from accessing SNAP benefits when they need them most.
                 <br />
@@ -51,96 +51,65 @@
             </form>
         </div>
 
-        <div id="occupyResults" class="col-xs-6">
-            <ul class="nav-tabs" role="tablist">
-                <li>
-                    <i class="glyphicon glyphicon-earphone" style="color: white;"></i>
-                    <p style="color: white;">Call</p>
+        <div id="occupyResults" style="background-color: #006FCC;">
+            <h3 class="text-center" id="welcomeRepName" style="color: white;">John Cornyn - (R)</h3>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="pull-left">
+                    <a data-toggle="tab" role="tab" href="#occupyCall"><i class="glyphicon glyphicon-earphone" style="color: white;">Call</i></a>
                 </li>
-                <li>
-                    <i class="glyphicon glyphicon-envelope" style="color: white;"></i><p style="color: white;">Email</p>
+                <li class="pull-right">
+                    <a data-toggle="tab" role="tab" id="emailRepTab" href="#occupyEmail"><i class="glyphicon glyphicon-envelope" style="color: white;">Email</i></a>
                 </li>
             </ul>
         </div>
 
-        <div id="occupyCall" class="col-xs-6 tab-content">
-            <div class="row" style="background-color: #006FCC;">
-                <!--section with name/contact options-->
-                <h3 class="text-center" id="welcomeRepName" style="color: white;">John Cornyn - (R)</h3>
-                <ul class="list-inline text-center">
-                    <li>
-                        <i class="glyphicon glyphicon-earphone" style="color: white;"></i><p style="color: white;">Call</p>
-                    </li>
-                    <li>
-                        <i class="glyphicon glyphicon-envelope" style="color: white;"></i><p style="color: white;">Email</p>
-                    </li>
-                </ul>
-                <!--section with text-->
-                <p style="color: #006fcc; background-color: #d8d8d8; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
-                    <span class="lead text-center">
-                        Please call your legislator's Austin office and tell whoever answer the phone:
-                    </span>
-                    <br />
-                    <br />
-                    -Your name, and that you are a constitutent.
-                    <br />
-                    - Urge the member to oppose HB 1485 when it receives a floor vote this week.
-                    <br />
-                    - If you have a personal story about hunger or SNAP please share it.
-                    <br />
-                    - Thank them for their assistance!
-                </p>
-                <footer id="welcomeRepAction" style="color: white;">
-                    <button class="btn btn-lg btn-primary btn-block" id="callButton" type="submit" style="color: white; background-color: #1DB455 ;">Call Sen. Cornyn Now!</button>
-                </footer>
-            </div>
+        <div id="occupyCall" class="tab-pane active" style="color: #006fcc; background-color: #d8d8d8; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+            <p>
+                <span class="lead text-center">
+                    Please call your legislator's Austin office and tell whoever answer the phone:
+                </span>
+                <br />
+                <br />
+                -Your name, and that you are a constitutent.
+                <br />
+                - Urge the member to oppose HB 1485 when it receives a floor vote this week.
+                <br />
+                - If you have a personal story about hunger or SNAP please share it.
+                <br />
+                - Thank them for their assistance!
+            </p>
+            <button id="callRepButton" class="btn btn-lg btn-primary btn-block" type="submit" style="color: white; background-color: #1DB455 ;">Call Sen. Cornyn Now!</button>
         </div>
 
-        <div id="occupyEmail" class="col-xs-6 tab-content">
-            <div class="row" style="background-color: #006FCC;">
-                <!--section with name/contact options-->
-                <h3 class="text-center" id="welcomeRepName" style="color: white;">John Cornyn - (R)</h3>
-                <ul class="list-inline text-center">
-                    <li>
-                        <i class="glyphicon glyphicon-earphone" style="color: white;"></i><p style="color: white;">Call</p>
-                    </li>
-                    <li>
-                        <i class="glyphicon glyphicon-envelope" style="color: white;"></i><p style="color: white;">Email</p>
-                    </li>
-                </ul>
-                <!--section with text-->
-                <p style="color: #006fcc; background-color: #d8d8d8; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
-                    Dear Senator Cornyn,
-                    <br />                    
-                    <br />
-                    I am a constitutent, and am writing to urge you to oppose HB 1485 when it comes to the House floor this week.
-                    <br />
-                    <br />
-                    This bill  would make it harder for struggling Texans to put enough food on the table by restricting working families' ability to access SNAP benefits. SNAP is an important resource for my community and our state.
-                    <br />
-                    <br />
-                    Thank you for your consideration.
-                    <br />
-                    <br />
-                    Sincerely,
-                    <br />
-                    <br />
-                    NAME
-                    <br />
-                    <br />
-                    ADDRESS
-                </p>
-                <footer id="welcomeRepAction" style="color: white;">
-                    <button class="btn btn-lg btn-primary btn-block" id="emailButton" type="submit" style="color: white; background-color: #1DB455 ;">Email Sen. Cornyn Now!</button>
-                </footer>
-            </div>
+        <div id="occupyEmail" class="tab-pane" style="color: #006fcc; background-color: #d8d8d8; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+            <p>
+                Dear Senator Cornyn,
+                <br />
+                <br />
+                I am a constitutent, and am writing to urge you to oppose HB 1485 when it comes to the House floor this week.
+                <br />
+                <br />
+                This bill  would make it harder for struggling Texans to put enough food on the table by restricting working families' ability to access SNAP benefits. SNAP is an important resource for my community and our state.
+                <br />
+                <br />
+                Thank you for your consideration.
+                <br />
+                <br />
+                Sincerely,
+                <br />
+                <br />
+                NAME
+                <br />
+                <br />
+                ADDRESS
+            </p>
+            <button class="btn btn-lg btn-primary btn-block" id="emailButton" type="submit" style="color: white; background-color: #1DB455 ;">Email Sen. Cornyn Now!</button>
         </div>
 
     </div><!-- /container -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
-
 </html>
 
 
@@ -189,34 +158,34 @@
             data: userLogin,
             dataType: "JSON",
             success: occupyLege.successCall,
-            error: electa.services.loginAjaxError,
+            error: occupyLege.error,
         }
         $.ajax(url, settings)
     };
 
-    //occupyLege.successCall = function () {
 
+    $("#emailRepTab").on("click", occupyLege.showEmailTab);
+
+    occupyLege.showEmailTab = function () {
+
+        $("#occupyEmail").tabs();
+
+
+
+
+    };
+
+    //occupyLege.successCall = function () {
     //    if (electa.page.returnUrl) {
     //        window.location.href = electa.page.returnUrl;
     //    }
-
     //    else {
-
     //        window.location.href = "/users/info"
     //    }
-
     //}
-
     //eocc = function (data, jqXHR, textStatus) {
     //    $("#signinbutton").val("Try Again");
-
     //    electa.utils.errorMessageExposer(data, textStatus);
     //}
-
-
-
-
-
-
 
 </script>
