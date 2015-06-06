@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,16 +26,73 @@
 
     <div class="container">
 
-      <form class="form-signin">
-        <h2 class="form-signin-heading">OccupyTheLege</h2>
-        <label for="inputAddress" class="sr-only">Street Address</label>
-        <input type="text" id="inputAddress" class="form-control" placeholder="Street Address" required autofocus>
-        <label for="inputCity" class="sr-only">City</label>
-        <input type="text" id="inputCity" class="form-control" placeholder="City" required>
-        <label for="inputZip" class="sr-only">Zip</label>
-        <input type="text" id="inputZip" class="form-control" placeholder="Zip" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Connect</button>
-      </form>
+        <div id="welcomePage">
+            <h2 class="form-signin-heading">OccupyTheLege<i class="glyphicon glyphicon-question-sign pull-right"></i></h2>
+            <div class="row">
+                <h3 id="welcomeRepName">John Cornyn - (R)</h3>
+                <ul class="list-inline">
+                    <li>
+                        <i class="glyphicon glyphicon-earphone"></i><p>Call</p>
+                    </li>
+                    <li>
+                        <i class="glyphicon glyphicon-envelope"></i><p>Email</p>
+                    </li>
+                    <li>
+                        <i class="glyphicon glyphicon-pencil"></i><p>Write</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="welcomeCampaignMsg" class="row">
+                <h3 id="welcomeIssue">
+                    Main Topic (Bill or Issue)
+                </h3>
+                <p id="welcomeRepName2">Sen. Cornyn,</p>
+                <br />
+                <p id="welcomeMsg1">Paragraph 1 of info</p>
+                <br />
+                <p id="welcomeMsg2">Paragraph 2 of info</p>
+                <br />
+                <p id="welcomeSalutation">Bye Bye</p>
+            </div>
+            <div class="row" id="welcomeRepEmail">
+                <h2>cornyn@senate.gov</h2>
+            </div>
+            <div class="row" id="welcomeRepAction">
+                Email Sen. Cornyn now!
+            </div>
+        </div>
+
+        <div id="addressForm">
+            <form class="form-signin">
+                <h2 class="form-signin-heading">OccupyTheLege<i class="glyphicon glyphicon-question-sign pull-right"></i></h2>
+                <p>Enter your address below to find and connect with the people who represent you!</p>
+                <label for="inputAddress" class="sr-only">Street Address</label>
+                <input type="text" id="inputAddress" name="inputAddress" class="form-control" placeholder="Street Address" required autofocus>
+                <label for="inputCity" class="sr-only">City</label>
+                <input type="text" id="inputCity" name="inputCity" class="form-control" placeholder="City" required>
+                <label for="inputZip" class="sr-only">Zip</label>
+                <input type="text" id="inputZip" name="inputZip" class="form-control" placeholder="Zip" required>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Connect</button>
+            </form>
+        </div>
+
+      <div id="searchResults">
+          <h2 class="form-signin-heading">OccupyTheLege<i class="glyphicon glyphicon-question-sign pull-right"></i></h2>
+          <div class="row">
+              <h3 id="searchRepName">John Cornyn - (R)</h3>
+              <ul class="list-inline">
+                  <li>
+                      <i class="glyphicon glyphicon-earphone"></i><p>Call</p>
+                  </li>
+                  <li>
+                      <i class="glyphicon glyphicon-envelope"></i><p>Email</p>
+                  </li>
+                  <li>
+                      <i class="glyphicon glyphicon-pencil"></i><p>Write</p>
+                  </li>
+              </ul>
+          </div>
+      </div>
 
     </div> <!-- /container -->
 
@@ -43,4 +100,37 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
+
+
+
 </html>
+
+
+<script type="text/javascript">
+
+    occupyLege.startup = function () {
+
+        occupyLege.addressValidation = function () {
+            $('#addressForm').validate({
+                rules: {
+                    'inputAddress': {
+                        required: true,
+                    },
+                    'inputCity': {
+                        required: true
+                    },
+                    'inputZip': {
+                        required: true
+                    },
+                }
+            })
+        };
+
+
+
+
+
+
+    }
+
+</script>

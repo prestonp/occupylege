@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{ABB2DC21-5CDA-4C25-909A-15D371C40230}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>OccupyLege</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\objects\05\bd71b6ec2c1982d1e8a5653073281994564ae8" />
+    <None Include=".git\objects\09\5edc090e1501c587a6adbdad751b9534773cbc" />
+    <None Include=".git\objects\0e\eb4e2cee60b0fb38841edd9c13b14c9f39f414" />
+    <None Include=".git\objects\14\032aabd85b43a058cfc7025dd4fa9dd325ea97" />
+    <None Include=".git\objects\14\13fc609ab6f21774de0cb7e01360095584f65b" />
+    <None Include=".git\objects\1c\88b71e8bf09ce03fa34d123ac55bf727cc3c55" />
+    <None Include=".git\objects\21\dafc68d5fe12053d2a6d45ccc89bb23d709921" />
+    <None Include=".git\objects\23\e61936a1b5fbc38435b58e683990e6bd2938dd" />
+    <None Include=".git\objects\2d\e41ad122ceacb7a8622b114c3afbe08b8c79f6" />
+    <None Include=".git\objects\2f\d84f36ebefeecb6ebd7780cbccf9b69b95add2" />
+    <None Include=".git\objects\3b\d5d0a4803967bc0bf72a7dd66d7e292ed2e586" />
+    <None Include=".git\objects\59\79aac24d8c57eb20d792134569fc19170bf307" />
+    <None Include=".git\objects\5a\12d631732892b7f236fdda9acbd21edfa0c19a" />
+    <None Include=".git\objects\5a\f356e9d986a7cde822cdea48bbb8d008b82b1e" />
+    <None Include=".git\objects\64\539b54c3751a6d9adb44c8e3a45ba5a73b77f0" />
+    <None Include=".git\objects\6f\eb11086f45e266dd2334213479f0dc2276fb02" />
+    <None Include=".git\objects\92\0738cba25ea0e9a49b8d23dce95601bf811bca" />
+    <None Include=".git\objects\94\fb5490a2ed10b2c69a4a567a4fd2e4f706d841" />
+    <None Include=".git\objects\9e\612858f802245ddcbf59788a0db942224bab35" />
+    <None Include=".git\objects\9f\9497cbb888d5ebc49c04bef3f9271b86fc0e28" />
+    <None Include=".git\objects\b0\fdfcbf9bfa064592dd7b2e3910315ccf58fba7" />
+    <None Include=".git\objects\b9\3a4953fff68df523aa7656497ee339d6026d64" />
+    <None Include=".git\objects\be\3d72df52adba6c252b9c2e559ccc33c0123d4a" />
+    <None Include=".git\objects\bf\6aa80602d9303b61e8d5e63c10568e55b6a4d8" />
+    <None Include=".git\objects\c8\f82e592a181afd01014546f58218e213429f6c" />
+    <None Include=".git\objects\cd\1c616ad862823506143fda108e7caa2a58d1ed" />
+    <None Include=".git\objects\ce\fa3d1ae367429a366230ca2c4c995616bb0790" />
+    <None Include=".git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391" />
+    <None Include=".git\objects\fb\15e3d69c352f7e0a7fc4c20fb9d16721a05171" />
+    <None Include=".git\objects\fd\2828af4bb08637611b02d11aff04fab1a35fa5" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".project" />
+    <None Include=".settings\.jsdtscope" />
+    <None Include=".settings\org.eclipse.wst.jsdt.ui.superType.container" />
+    <None Include=".settings\org.eclipse.wst.jsdt.ui.superType.name" />
+    <None Include="css\bootstrap-theme.css.map" />
+    <None Include="css\bootstrap.css.map" />
+    <None Include="data.csv" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".git\ms-persist.xml" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="index.html" />
+    <Content Include="jquery.csv-0.71.min.js" />
+    <Content Include="jquery.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="occupylege.js" />
+    <Content Include="simple.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\branches\" />
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\objects\pack\" />
+    <Folder Include=".git\refs\tags\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
