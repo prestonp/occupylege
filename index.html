@@ -13,7 +13,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <style>
+      .hide { display: none; }
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -51,7 +53,7 @@
             </form>
         </div>
 
-        <div id="occupyResults" style="background-color: #006FCC;">
+        <div id="occupyResults" class="hide" style="background-color: #006FCC;">
             <h3 class="text-center" id="welcomeRepName" style="color: white;">John Cornyn - (R)</h3>
             <ul class="nav nav-tabs" role="tablist">
                 <li class="pull-left">
@@ -63,7 +65,7 @@
             </ul>
         </div>
 
-        <div id="occupyCall" class="tab-pane active" style="color: #006fcc; background-color: #d8d8d8; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+        <div id="occupyCall" class="tab-pane active hide" style="color: #006fcc; background-color: #d8d8d8; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
             <p>
                 <span class="lead text-center">
                     Please call your legislator's Austin office and tell whoever answer the phone:
@@ -81,7 +83,7 @@
             <a href="#" id="callRepButton" class="btn btn-lg btn-primary btn-block" type="submit" style="color: white; background-color: #1DB455 ;">Call Sen. Cornyn Now!</a>
         </div>
 
-        <div id="occupyEmail" class="tab-pane" style="color: #006fcc; background-color: #d8d8d8; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+        <div id="occupyEmail" class="tab-pane hide" style="color: #006fcc; background-color: #d8d8d8; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
             <p>
                 Dear <span id="emailRepName">Senator Cornyn</span>,
                 <br />

@@ -17,3 +17,7 @@ function updateOccupyResults(data) {
   $emailButton.html('Email ' + name + ' Now!');
   $emailButton.attr('href', 'mailto:' + data.email);
 }
+
+function toggleView() {
+  $('#occupyMain, #occupyResults, #occupyCall, #occupyEmail').toggleClass('hide');
+}
