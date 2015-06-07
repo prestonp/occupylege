@@ -53,6 +53,10 @@
     $emailButton.attr('href', 'mailto:' + data.email);
 
     toggleView();
+
+    $('#gpsButton i')
+      .addClass('glyphicon-map-marker')
+      .removeClass('glyphicon-refresh');
   }
 
   function toggleView() {
@@ -66,6 +70,9 @@
 
   function getAddress (e) {
     e.preventDefault();
+    $('#gpsButton i')
+      .removeClass('glyphicon-map-marker')
+      .addClass('glyphicon-refresh');
 
     var googleEndpoint = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=:lat,:lng';
     var options = {
