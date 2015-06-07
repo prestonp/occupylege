@@ -15,6 +15,27 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
       .hide { display: none; }
+
+      #homeLink {
+        color: #FFF;
+        text-decoration: none;
+        transition: all .3s;
+      }
+
+      #homeLink:hover {
+        color: #C2D6FA;
+      }
+
+      .glyphicon-refresh {
+        color: #fff;
+        -webkit-animation:spin 3s linear infinite;
+       -moz-animation:spin 3s linear infinite;
+       animation:spin 3s linear infinite;
+      }
+
+        @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+        @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+        @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -27,7 +48,13 @@
 <body style="background-color:#2196F3 ;">
 
     <nav class="navbar" style="background-color: #0A7FDC; ">
-        <h2 class="form-signin-heading" style="color: white;">OccupyLege<i style="color: white;" class="glyphicon glyphicon-question-sign pull-right"></i></h2>
+        <div class="container">
+            <h2 class="form-signin-heading" style="color: white;">
+                <a href="#" id="homeLink">
+                OccupyLege<i style="color: white;" class="glyphicon glyphicon-question-sign pull-right"></i>
+                </a>
+            </h2>
+        </div>
     </nav>
 
     <div class="container">
@@ -43,11 +70,11 @@
             </p>
             <form id="occupyForm" class="form-signin" style="background-color: #006FCC;">
                 <label for="inputAddress" class="sr-only" style="color: white;">Street Address</label>
-                <input type="text" id="inputAddress" name="inputAddress" class="form-control" placeholder="Street Address" required autofocus>
+                <input type="text" id="inputAddress" name="Address1" class="form-control" placeholder="Street Address" required autofocus>
                 <label for="inputCity" class="sr-only" style="color: white;">City</label>
-                <input type="text" id="inputCity" name="inputCity" class="form-control" placeholder="City" required>
+                <input type="text" id="inputCity" name="City" class="form-control" placeholder="City" required>
                 <label for="inputZip" class="sr-only" style="color: white;">Zip</label>
-                <input type="text" id="inputZip" name="inputZip" class="form-control" placeholder="Zip" required>
+                <input type="text" id="inputZip" name="ZipCode" class="form-control" placeholder="Zip" required>
                 <button class="btn btn-lg btn-primary btn-block" id="inputButton" type="submit" style="color: white; background-color: #1DB455 ;">Connect!</button>
                 <button class="btn btn-lg btn-primary btn-block" id="gpsButton" type="submit" style="color: white; background-color: #1DB455 ;"><i class="glyphicon glyphicon-map-marker"></i></button>
             </form>
@@ -110,14 +137,19 @@
 
     </div><!-- /container -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    -->
     <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.3/lodash.min.js"></script>
     <script src="js/occupylege.js"></script>
 </body>
 </html>
 
 
 <script type="text/javascript">
+
+    var occupyLege = {};
 
     occupyLege.startup = function () {
         occupyLege.addressValidation();
