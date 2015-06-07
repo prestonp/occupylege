@@ -15,6 +15,8 @@
     $('#occupyForm').on('submit', submitForm);
     $('#homeLink').on('click', showForm);
     $('#gpsButton').on('click', getAddress);
+    $('#tabCall').on('click', showCall);
+    $('#tabEmail').on('click', showEmail);
   }
 
   function submitForm (e) {
@@ -53,7 +55,7 @@
     $emailButton.attr('href', 'mailto:' + data.email);
 
     toggleView();
-
+    showCall();
     $('#gpsButton i')
       .addClass('glyphicon-map-marker')
       .removeClass('glyphicon-refresh');
@@ -105,5 +107,15 @@
     };
 
     navigator.geolocation.getCurrentPosition(success, error, options);
+  }
+
+  function showEmail() {
+    $('#occupyEmail').removeClass('hide');
+    $('#occupyCall').addClass('hide');
+  }
+
+  function showCall() {
+    $('#occupyEmail').addClass('hide');
+    $('#occupyCall').removeClass('hide');
   }
 })(jQuery);
